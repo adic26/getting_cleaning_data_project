@@ -52,7 +52,11 @@ all merged and combined into clean_data variable
 Final creating a tidy set with average of each variable for each activity and each subject
 
 Using Library plyr
-"subset" is the final variable --> subsets all data from 'clean_data' by grouping subject and activity while taking a mean of other columns
+**"subset"** is the final variable --> subsets all data from 'clean_data' by grouping subject and activity while taking a mean of other columns
+
+Final variable **subset** is the tidy clean data that will be used to evaluate this project.
+
+
 
 
 
