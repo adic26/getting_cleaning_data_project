@@ -37,8 +37,6 @@ run_analysis <- function()
   colnames( x_data ) = features$feature[ mean_std_columns ]
   
   ## Cleanup Y data
-  ## TODO: Find a better way to do this, vectorized
-  ##       Trying to read it from the activities table failed
   y_data$activity[ y_data$activity == "1" ] = "WALKING"
   y_data$activity[ y_data$activity == "2" ] = "WALKING_UPSTAIRS"
   y_data$activity[ y_data$activity == "3" ] = "WALKING_DOWNSTAIRS"
@@ -54,4 +52,6 @@ run_analysis <- function()
   ## and each subject
   library(plyr)
   subset <- ddply(clean_data, .(subject, activity), numcolwise(mean))
+  
+  subset
 }
